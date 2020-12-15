@@ -90,7 +90,7 @@ function setup() {
 
 async function train() {
   const options = {
-    epochs : 70,
+    epochs : 1,
     validationSplit: 0.1, //data to validation: train 90%, kiem tra 10%;
     shuffle: true, // doi cho du lieu
     callbacks: {
