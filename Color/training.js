@@ -89,6 +89,7 @@ function setup() {
 }
 
 async function train() {
+  var percent = document.getElementById('percent');
   const options = {
     epochs : 50,
     validationSplit: 0.1, //data to validation: train 90%, kiem tra 10%;
@@ -100,6 +101,8 @@ async function train() {
         console.log('Epoch: '+ nums); // in ra lan train thu ?
         console.log('Loss:'+ logs.loss) // in ra mat mat
         lossP.html('Độ chính xác :' + (100-(logs.loss.toFixed(2))*10) + ' %');
+        var per = ((parseInt(nums)+2) * 2)
+        percent.innerHTML = per + ' %';
       }
     }
     
